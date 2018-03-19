@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Guessing Game</title>
+    <style>
+      img {
+        display: none;
+      }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <h1>Guess My Number</h1>
+    <input type='text' id='guess' placeholder='1-20'>
+    <input type='submit' value='Submit' id='submit'>
+    <p id='previous'></p>
+    <p id='comment'></p>
+    <img src='http://www.reactiongifs.com/r/yay2.gif' alt='excited gif' width=400 height=300 id='excited'>
+    <img src='https://metrouk2.files.wordpress.com/2016/05/crying-gif-2.gif' alt='sad gif' width=400 height=300 id='sad'>
+
+    <script>
+      var myNum = 12;
+
+      $(document).ready(function() {
+        $('#submit').click(function() {
+          //selects all input elements of type='text'
+          var guess = $('input:text').val();
+          //input returns a string; have to turn it into number to compare
+          var guessNum = parseInt(guess);
+
+          if (guessNum === myNum) {
+            $('#previous').empty();
+            $('#comment').html(guessNum + ' is the correct guess!! WOOO');
+            $('#excited').show();
+            $('#sad').hide();
+          } else {
+            $('#previous').html('Previous guess: ' + guessNum);
+            $('#comment').html('Sorry, try again :(');
+            $('#excited').hide();
+            $('#sad').show();
+          }
+          //giving the input type=text tag a value of an empty string --> empty input field
+          $('input:text').val('');
+        })
+      });
+
+    </script>
+  </body>
+</html>
