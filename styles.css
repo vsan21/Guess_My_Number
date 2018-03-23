@@ -1,0 +1,14 @@
+img {
+  display: none;
+}
+
+h1 {
+  font-family: 'Satisfy', cursive;
+  font-size: 50px;
+}
+
+#comment {
+  font-family: 'Handlee', cursive;
+  font-size: 20px;
+  color: red;
+}
