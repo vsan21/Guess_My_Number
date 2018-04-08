@@ -1,14 +1,28 @@
+body {
+  background-image: url('http://www.pptback.com/uploads/abstract-neutral-soft-backgrounds-powerpoint.jpg');
+}
+
 img {
   display: none;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 h1 {
   font-family: 'Satisfy', cursive;
-  font-size: 50px;
+  font-size: 65px;
+}
+
+div {
+  text-align: center;
+}
+
+p {
+  font-size: 20px;
 }
 
 #comment {
   font-family: 'Handlee', cursive;
-  font-size: 20px;
+  font-size: 30px;
   color: red;
 }
